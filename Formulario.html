@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        label, select, textarea {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="procesar.php" style="background-color: rgb(235, 235, 152); font-style:normal; font-family: Arial, Helvetica, sans-serif; font-size: 15px;" method="post">
+
+        <fieldset>
+          <legend style="background-color: rgb(175, 235, 8); font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 20px;">FORMULARIO</legend><br>
+
+            <Fieldset>
+                <legend>**DATOS PERSONALES**</legend>
+            <label for="id_nombre">Nombre:</label>
+                <input type="text" name="nombre" required value="" id="id_nombre" placeholder="Ingrese su Nombre"><br><br>
+
+            <label for="id_edad">Edad:</label>
+                <input type="number" name="edad" id="id_edad" min="18" max="99" placeholder="Ingrese su Edad" maxlength="20" minlength="5"><br><br>
+
+            <label for="id_email">Email:</label>
+                <input type="email" name="email" id="id_email" placeholder="Ingrese su Email">
+            
+            <label for="id_password">Clave:</label>
+                <input type="password" name="password" id="password" placeholder="Ingrese su Clave"><br>
+            <span style="background-color: aqua; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 12px;">*La clave debe tener como minimo 8 caracteres alfanumericos</span><br><br>
+            </Fieldset>
+            
+            <br><fieldset>
+                <legend>**MARCA VEHICULO**</legend>
+                    <input type="checkbox" name="marca" value="fiat" checked>FIAT
+                    <input type="checkbox" name="marca" value="chevrolet">CHEVROLET <br>
+            </fieldset>
+            
+            <br><fieldset>
+                <legend>**SEXO**</legend>
+                    <input type="radio" name= "sexo" value="masculino" checked>Masculino
+                    <input type="radio" name= "sexo" value="femenino" checked >Femenino
+            </fieldset>
+
+            <br><fieldset>
+                <legend>**PAISES**</legend>
+                    <select name="pais" id="">
+                        <option value="argentina" selected>ARGENTINA</option>
+                        <option value="eeuu">EEUU</option>  
+                        <option value="brasil">BRASIL</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <span style="background-color: aqua; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 12px;">*Por favor seleccione un pais</span>
+                </fieldset>
+
+            <br><fieldset>
+                    <legend>**ADJUNTOS**</legend>
+                    <input type="file" name="archivo" id="" multiple>
+                    <br><span style="background-color: aqua; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 12px;">*Por favor seleccione los archivos</span>
+            </fieldset>
+            
+            <h4>Comentarios:</h4>
+            <textarea name="comentarios" id="comentarios" cols="30" rows="5"></textarea>
+            
+            <br><button>Enviar</button>
+
+            <input type="reset" value="Limpiar" 
+        
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
